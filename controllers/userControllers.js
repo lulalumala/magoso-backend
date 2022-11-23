@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
         }
         const checkPassword = await bcrypt.compare(password, user.password)
         if (!checkPassword) {
-            return res.json({ error: "Incorrect password" })
+            return res.status(404).json({ error: "Incorrect password" })
         }
 
         const loginToken = createToken(user._id)

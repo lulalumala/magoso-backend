@@ -13,7 +13,6 @@ const port = process.env.PORT || 8000
 
 // use cors middleware
 const corsOptions = {
-    "Access-Control-Request-Method": "POST",
     "Access-Control-Allow-Origin": "*"
 
 }
